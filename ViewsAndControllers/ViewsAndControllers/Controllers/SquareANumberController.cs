@@ -18,5 +18,15 @@ namespace ViewsAndControllers.Controllers
         {
             return View(viewName: "Index", model: (inputNumber * inputNumber));
         }
+        [HttpPost]
+        public ActionResult SaySquareRt(double inputNumber)
+        {
+            return View(viewName: "Index", model: Math.Pow(inputNumber,(1.0/3)));
+        }
+        [HttpPost]
+        public ActionResult SayCubeRt(double inputNumber)
+        {
+            return View(viewName: "Index", model: Math.Pow(inputNumber,(1.0/3)));
+        }
     }
 }
